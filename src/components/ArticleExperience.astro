@@ -1,0 +1,25 @@
+---
+const { date, title, subtitle, description, tecnologies = [] } = Astro.props;
+---
+
+<article class="sm:flex sm:gap-3">
+  <div class="sm:w-[8em] text-gray-400 tracking-tighter">
+    {date}
+  </div>
+  <div class="flex-1">
+    <h3 class="font-bold text-lg pt-1 sm:pt-0">{title}</h3>
+    <h4
+      class="font-bold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-cyan-300"
+    >
+      {subtitle}
+    </h4>
+    <p class="py-3 tracking-wide text-slate-300">{description}</p>
+    <ul class="flex flex-wrap gap-3 text-sm">
+      {
+        tecnologies.map((name: string) => (
+          <li class="px-3 py-1 border border-white rounded">{name}</li>
+        ))
+      }
+    </ul>
+  </div>
+</article>

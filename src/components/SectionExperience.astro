@@ -1,1 +1,22 @@
-<section id="experience"></section>
+---
+import ArticleExperience from "./ArticleExperience.astro";
+---
+
+<section id="experience">
+  <h2 class="font-bold text-md mt-24 mb-6">EXPERIENCE</h2>
+  <div class="flex flex-col gap-12">
+    <ArticleExperience
+      date="Aug - Sep 2023"
+      title="Bocancorporation's blog"
+      subtitle="Academic Experience - Internship"
+      description="Collaborated with other student to create a new blog type web application to bocancorporation company, researching and incorporating new technologies as aws lambda, api gateway, dynamodb and s3 buckets."
+      tecnologies={["Next.js 13", "JavaScript", "React", "Tailwind", "AWS"]}
+    />
+    <ArticleExperience
+      date="Jul - Sep 2023"
+      title="Teaching Assistant Program"
+      subtitle="Academic Experience - Henry Bootcamp"
+      description="Coordinated a group of students with the objetive of integrating them into the study team, implementing routines and dynamics, offering feedback for the improvement of the Bootcamp processes."
+    />
+  </div>
+</section>
