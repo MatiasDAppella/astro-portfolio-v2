@@ -1,0 +1,29 @@
+---
+import SocialMedia from "./SocialMedia.astro";
+---
+
+<header
+  class="lg:sticky lg:top-0 lg:flex lg:flex-col lg:justify-between pt-24 lg:py-24 lg:h-screen lg:w-[40%]"
+>
+  <div id="presentation-letter" class="mb-8">
+    <h1 class="text-[2.5em] sm:text-[3em] font-bold tracking-wide -ml-[1px]">
+      Matias Appella
+    </h1>
+    <span class="inline-block tracking-wider sm:text-lg mb-3 text-slate-300"
+      >Full Stack Developer</span
+    >
+    <p class="max-w-[15em] text-gray-300">
+      I provide fresh, scalable and maintainable web applications.
+    </p>
+  </div>
+  <nav
+    class="hidden lg:flex lg:flex-col lg:gap-3 lg:flex-grow font-bold text-sm"
+  >
+    <a href="#about">ABOUT</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#experience">EXPERIENCE</a>
+    <a href="#education">EDUCATION</a>
+    <a href="#skills">SKILLS</a>
+  </nav>
+  <SocialMedia />
+</header>
