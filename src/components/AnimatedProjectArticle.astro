@@ -1,0 +1,59 @@
+---
+const { title, subtitle, backgroundImage, characterImage } = Astro.props;
+---
+
+<article>
+  <img src={`/images/${backgroundImage}`} alt="" />
+  <img src={`/images/${characterImage}`} alt="" />
+</article>
+
+<style>
+  article {
+    z-index: 60;
+    position: relative;
+    width: calc(50% - 1rem);
+    max-width: 280px;
+    transition: all 0.3s ease;
+  }
+  article img:first-child {
+    box-shadow: 0 20px 60px -30px rgba(0, 30, 255, 0.5);
+    object-fit: cover;
+    width: 100%;
+  }
+  article img:last-child {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: 0.3s ease;
+    opacity: 0;
+  }
+  article:hover {
+    z-index: 70;
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+  }
+  article::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 10%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0) 95%
+    );
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  article:hover::before {
+    opacity: 1;
+  }
+  article:hover img:last-child {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+</style>
