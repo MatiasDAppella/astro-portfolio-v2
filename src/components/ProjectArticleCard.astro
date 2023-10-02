@@ -1,0 +1,32 @@
+---
+const {
+  title,
+  subtitle,
+  image,
+  technologies = [],
+  state = "Pending",
+} = Astro.props;
+---
+
+<article class="sm:flex sm:gap-3">
+  <div class="hidden sm:block sm:w-[8em] text-gray-400 tracking-tighter">
+    <img
+      src={`/images/${image}`}
+      class="w-full aspect-[4/3] rounded object-cover mt-[6px]"
+    />
+  </div>
+  <div class="relative flex-1">
+    <h3 class="font-bold text-lg pt-1 sm:pt-0">{title}</h3>
+    <p class="py-3 tracking-wide text-slate-300">{subtitle}</p>
+    <ul class="flex flex-wrap gap-3 text-sm">
+      {
+        technologies.map((name: string) => (
+          <li class="px-3 py-1 border border-white rounded">{name}</li>
+        ))
+      }
+      <span class="px-3 py-1 rounded-full bg-slate-700 text-gray-300 text-xs"
+        >{`• ${state}`}</span
+      >
+    </ul>
+  </div>
+</article>
