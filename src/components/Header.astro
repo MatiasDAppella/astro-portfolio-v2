@@ -19,24 +19,11 @@ import SocialMedia from "./SocialMedia.astro";
   <nav
     class="hidden lg:flex lg:flex-col lg:gap-3 lg:flex-grow font-bold text-sm"
   >
-    <a href="#about">ABOUT</a>
-    <a href="#projects">PROJECTS</a>
-    <a href="#experience">EXPERIENCE</a>
-    <a href="#education">EDUCATION</a>
-    <a href="#henry-projects">HENRY ✨</a>
+    <a id="a_about" href="#about">ABOUT</a>
+    <a id="a_projects" href="#projects">PROJECTS</a>
+    <a id="a_experience" href="#experience">EXPERIENCE</a>
+    <a id="a_education" href="#education">EDUCATION</a>
+    <a id="a_henry-projects" href="#henry-projects">HENRY ✨</a>
   </nav>
   <SocialMedia />
 </header>
-
-<style is:global>
-  #about:target,
-  #projects:target,
-  #experience:target,
-  #education:target,
-  #henry-projects:target {
-    scroll-margin-top: 7rem;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
