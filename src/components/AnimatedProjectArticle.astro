@@ -1,17 +1,19 @@
 ---
-const { title, subtitle, backgroundImage, characterImage } = Astro.props;
+const { title, subtitle, backgroundImage, characterImage, url } = Astro.props;
 ---
 
-<article>
-  <img src={`/images/${backgroundImage}`} alt="" />
-  <img src={`/images/${characterImage}`} alt="" />
-</article>
+<a href={url} target="_blank"
+  ><article>
+    <img src={`/images/${backgroundImage}`} alt="" />
+    <img src={`/images/${characterImage}`} alt="" />
+  </article></a
+>
 
 <style>
   article {
     z-index: 60;
     position: relative;
-    width: calc(50% - 1rem);
+    width: 100%;
     max-width: 280px;
     transition: all 0.3s ease;
   }
