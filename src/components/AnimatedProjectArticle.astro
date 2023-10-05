@@ -2,7 +2,7 @@
 const { title, subtitle, backgroundImage, characterImage, url } = Astro.props;
 ---
 
-<a href={url} target="_blank"
+<a href={url} target="_blank" aria-label="project image"
   ><article>
     <img src={`/images/${backgroundImage}`} alt="" width="10" height="10" />
     <img src={`/images/${characterImage}`} alt="" width="10" height="10" />
