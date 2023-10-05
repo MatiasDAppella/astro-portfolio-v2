@@ -11,13 +11,15 @@ const { lang } = Astro.props;
       Matias Appella
     </h1>
     <span class="inline-block tracking-wider sm:text-lg mb-3 text-slate-300"
-      >Full Stack Developer</span
+      >{
+        lang === "eng" ? "Full Stack Developer" : "Desarrollador Full Stack"
+      }</span
     >
     <p class="max-w-[15em] text-gray-300">
       {
         lang === "eng"
           ? "I provide fresh, scalable and maintainable web applications."
-          : "Construyo aplicaciones web nuevas, escalables y mantenibles. "
+          : "Construyo aplicaciones web nuevas, escalables y mantenibles."
       }
     </p>
   </div>
