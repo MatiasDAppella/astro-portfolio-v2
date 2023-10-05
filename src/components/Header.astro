@@ -1,5 +1,6 @@
 ---
 import SocialMedia from "./SocialMedia.astro";
+const { lang } = Astro.props;
 ---
 
 <header
@@ -13,17 +14,55 @@ import SocialMedia from "./SocialMedia.astro";
       >Full Stack Developer</span
     >
     <p class="max-w-[15em] text-gray-300">
-      I provide fresh, scalable and maintainable web applications.
+      {
+        lang === "eng"
+          ? "I provide fresh, scalable and maintainable web applications."
+          : "Construyo aplicaciones web nuevas, escalables y mantenibles. "
+      }
     </p>
   </div>
   <nav
     class="hidden lg:flex lg:flex-col lg:gap-3 lg:flex-grow font-bold text-sm"
   >
-    <a id="a_about" href="#about">ABOUT</a>
-    <a id="a_projects" href="#projects">PROJECTS</a>
-    <a id="a_experience" href="#experience">EXPERIENCE</a>
-    <a id="a_education" href="#education">EDUCATION</a>
-    <a id="a_henry-projects" href="#henry-projects">HENRY ✨</a>
+    {
+      lang === "eng" ? (
+        <>
+          <a id="a_about" href="#about">
+            ABOUT
+          </a>
+          <a id="a_projects" href="#projects">
+            PROJECTS
+          </a>
+          <a id="a_experience" href="#experience">
+            EXPERIENCE
+          </a>
+          <a id="a_education" href="#education">
+            EDUCATION
+          </a>
+          <a id="a_henry-projects" href="#henry-projects">
+            HENRY ✨
+          </a>
+        </>
+      ) : (
+        <>
+          <a id="a_about" href="#about">
+            ACERCA DE MI
+          </a>
+          <a id="a_projects" href="#projects">
+            PROYECTOS
+          </a>
+          <a id="a_experience" href="#experience">
+            EXPERIENCIA
+          </a>
+          <a id="a_education" href="#education">
+            EDUCACIÓN
+          </a>
+          <a id="a_henry-projects" href="#henry-projects">
+            HENRY ✨
+          </a>
+        </>
+      )
+    }
   </nav>
   <SocialMedia />
 </header>
