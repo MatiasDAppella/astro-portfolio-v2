@@ -1,0 +1,28 @@
+---
+import ArticleCard from "../ArticleCard.astro";
+---
+
+<section id="education">
+  <h2 class="font-bold text-md mt-28 mb-6">EDUCACION</h2>
+  <div class="flex flex-col gap-12">
+    <ArticleCard
+      date="Jun - Sep 2023"
+      title="Henry Bootcamp"
+      subtitle="Web Developer - Full Stack"
+      description="Curso teórico-práctico de +800 horas donde aprendí a construir aplicaciones web cliente-servidor integrando modelos de bases de datos, colaborando con compañeros de equipo utilizando metodologías ágiles scrum."
+      tecnologies={["JavaScript", "React", "Node.js", "Express", "Scrum"]}
+    />
+    <ArticleCard
+      date="Mar 2014 - Dic 2018"
+      title="Instituto Superior Experimental de Tecnología Alimentaria"
+      subtitle="Systems Analyst Technician"
+      description="Carrera técnica donde adquirí lógica de programación y conocimientos sobre bases de datos, definiendo alcances y requerimientos de usuario/sistema en el desarrollo de aplicaciones de escritorio."
+      tecnologies={[
+        "Pseudocodigo",
+        "Microsoft Access",
+        "Visual Basic .NET",
+        "Visual Studio",
+      ]}
+    />
+  </div>
+</section>

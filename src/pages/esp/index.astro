@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import AboutSection from "../../components/esp/AboutSection.astro";
+import ProjectSection from "../../components/esp/ProjectSection.astro";
+import ExperienceSection from "../../components/esp/ExperienceSection.astro";
+import EducationSection from "../../components/esp/EducationSection.astro";
+import HenryProjectSection from "../../components/esp/HenryProjectSection.astro";
+---
+
+<Layout title="Matias Appella">
+  <Header />
+  <main class="pt-24 lg:py-24 lg:w-1/2">
+    <AboutSection />
+    <ProjectSection />
+    <ExperienceSection />
+    <EducationSection />
+    <HenryProjectSection />
+    <p class="text-xs tracking-wider mt-28">
+      Programado en <strong>Visual Studio Code</strong>. Construido con <strong
+        >Astro</strong
+      > 🚀 y <strong>Tailwind CSS</strong>, Desplegado en <strong>Vercel</strong
+      >. Inspirado en el portfolio <a
+        href="https://brittanychiang.com/"
+        target="_blank"
+        class="hover:underline">brittanychiang.com</a
+      >.
+    </p>
+    <p class="lg:hidden text-xs tracking-wider mb-16 mt-3">
+      Desarrollado por <strong>Matias Appella.</strong>
+    </p>
+  </main>
+</Layout>

@@ -1,0 +1,31 @@
+---
+import AnimatedProjectArticle from "../AnimatedProjectArticle.astro";
+---
+
+<section id="henry-projects">
+  <h2 class="font-bold text-md mt-28 mb-6">HENRY PROJECTS ✨</h2>
+  <p class="tracking-wide text-slate-300 mb-6">
+    These projects were developed by me, during Henry's bootcamp stage. Both are
+    built in react/vite and consume the Pokémon and Rick & Morty API
+    respectively through their own express server, handling queries to
+    postgreSQL databases using Sequelize ORM. <strong class="text-white"
+      >Check them!</strong
+    >
+  </p>
+  <div class="flex justify-center gap-8">
+    <AnimatedProjectArticle
+      title="Pokemon"
+      subtitle="Web Developer - Full Stack"
+      backgroundImage="pokemon-background-min.jpg"
+      characterImage="pikachu-jumping-min.png"
+      url="https://pokemon-2hde.onrender.com"
+    />
+    <AnimatedProjectArticle
+      title="Rick & Morty"
+      subtitle="Web Developer - Full Stack"
+      backgroundImage="rick-and-morty-background-min.jpg"
+      characterImage="rick-smiling-min.png"
+      url="https://rick-and-morty-qmxe.onrender.com"
+    />
+  </div>
+</section>

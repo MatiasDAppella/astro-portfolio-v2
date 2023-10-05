@@ -1,0 +1,22 @@
+---
+import ArticleCard from "../ArticleCard.astro";
+---
+
+<section id="experience">
+  <h2 class="font-bold text-md mt-28 mb-6">EXPERIENCIA</h2>
+  <div class="flex flex-col gap-12">
+    <ArticleCard
+      date="Ago - Sep 2023"
+      title="Blog de Bocancorporation"
+      subtitle="Experiencia Academica - Pasantia"
+      description="Colaboré con otros estudiantes en la creación de la aplicación web del tipo blog para la empresa bocancorporation, investigando sobre e incorporando tecnologias como lambda, api gateway, dynamodb y s3 buckets."
+      tecnologies={["Next.js 13", "JavaScript", "React", "Tailwind", "AWS"]}
+    />
+    <ArticleCard
+      date="Jul - Sep 2023"
+      title="Programa Teaching Assistant"
+      subtitle="Experiencia Academica - Henry Bootcamp"
+      description="Coordine un grupo de estudiantes con el objetivo de integrarlos al equipo de estudio, implementando rutinas y dinamicas, ofreciendo feedback para mejoras de los procesos del Bootcamp."
+    />
+  </div>
+</section>
