@@ -4,10 +4,23 @@ const { lang } = Astro.props;
 ---
 
 <header
-  class="lg:sticky lg:top-0 lg:flex lg:flex-col lg:justify-between pt-24 lg:py-24 lg:h-screen lg:w-1/2"
+  class="lg:sticky lg:top-0 lg:flex lg:flex-col lg:justify-between pt-24 lg:py-24 lg:h-screen lg:w-1/2 relative"
 >
+  <div id="config-section" class="absolute h-24 top-0 flex items-end">
+    {
+      lang === "eng" ? (
+        <a href="/esp" class="text-xs">
+          ENGLISH
+        </a>
+      ) : (
+        <a href="/" class="text-xs">
+          ESPAÑOL
+        </a>
+      )
+    }
+  </div>
   <div id="presentation-letter" class="mb-8">
-    <h1 class="text-[2.5em] sm:text-[3em] font-bold tracking-wide -ml-[1px]">
+    <h1 class="text-[2.5em] sm:text-[3em] font-bold tracking-wide -ml-[2px]">
       Matias Appella
     </h1>
     <span class="inline-block tracking-wider sm:text-lg mb-3 text-slate-300"
